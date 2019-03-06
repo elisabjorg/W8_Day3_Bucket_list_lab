@@ -10,3 +10,5 @@ GridView.prototype.bindEvents = function () {
     console.log(evt.detail);
   });
 };
+
+module.exports = GridView;

@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const formView = new FormView(listForm);
   formView.bindEvents();
 
+  const listsContainer = document.querySelector('#lists');
+  const listsGridView = new GridView(listsContainer);
+  listsGridView.bindEvents();
+
   const bucketList = new BucketList();
+  bucketList.bindEvents();
   bucketList.getData();
 });

@@ -12,7 +12,6 @@ BucketList.prototype.bindEvents = function () {
   }
 )};
 
-
 BucketList.prototype.getData = function () {
   this.request.get()
   .then((lists) => {
