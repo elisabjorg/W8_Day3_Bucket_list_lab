@@ -1,0 +1,43 @@
+.delete-btn {
+  width: 30px;
+  height: 30px;
+  background: url(../images/delete.png);
+  background-size: 30px;
+}
+
+button.delete-btn {
+    border: none;
+    padding: 0;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 12px;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  font-size: 20px;
+}
+
+body {
+  background: url(../images/florian-klauer-113-unsplash.jpg)
+}
+
+#list {
+  display: flex;
+}
+
+form {
+  font-size: 22px;
+}
+
+#add {
+  width: 120px;
+  height: 25px;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: #1aa3ff;
+}

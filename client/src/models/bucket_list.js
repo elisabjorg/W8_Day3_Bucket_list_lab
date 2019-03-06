@@ -9,8 +9,11 @@ const BucketList = function () {
 BucketList.prototype.bindEvents = function () {
   PubSub.subscribe('FormView:item-submitted', (evt) => {
     this.postList(evt.detail);
-  }
-)};
+})
+  PubSub.subscribe('View:item-delete-clicked', (evt) => {
+    this.deleteItem(evt.detail);
+  })
+};
 
 BucketList.prototype.getData = function () {
   this.request.get()
@@ -28,5 +31,12 @@ BucketList.prototype.postList = function(list) {
   .catch(console.error);
 };
 
+BucketList.prototype.deleteItem = function (itemId) {
+  this.request.delete(itemId)
+    .then((lists) => {
+      PubSub.publish('BucketList:data-loaded', lists);
+    })
+    .catch(console.error);
+}
 
 module.exports = BucketList;
